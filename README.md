@@ -132,6 +132,9 @@ SSH의 기본 포트는 22이므로 필자는 22를 추가해줬다.
 5. 재부팅 후 ```ssh localhost```로 접속이 잘되는지 
 
 # 재부팅시 자동으로 local port forward 
+재부팅을 하면 SSH 서버만 재실행 해야하는 것이 아니라,  
+Local 포트포워딩도 재실행 해줘야 한다. ~~어지간히 귀찮은 일이다~~
+
 
 # WSL + Docker Configuration
 To be continue...
