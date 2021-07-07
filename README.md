@@ -110,4 +110,28 @@ SSH의 기본 포트는 22이므로 필자는 22를 추가해줬다.
 5. 외부에서 SSH 접속이 성공하면 다음 스텝으로 넘어간다.  
   
 # 재부팅시 자동으로 SSH 서버 실행
+컴퓨터를 재부팅하면 SSH 서버가 꺼져서 다시 안켜진다.  
+일일이 다시 켜는 것이 귀찮고, 외부에서 WoL으로 윈도우 컴을 키는 경우 역시 잦음으로  
+다음의 과정을 통해 재부팅시 자동으로 SSH 서버를 켜보자  
+  
+1. 시작(윈도우 아이콘) -> 실행 -> "shell:startup"으로 "시작프로그램" 폴더에 접근한다.  
+  
+2. sshd.bat이라는 파일명에 아래의 코드를 작성한다.  
+```
+@echo off
+"C:\Windows\System32\bash.exe" -c "sudo service ssh start"
+``` 
+  
+3. Ubuntu(WSL)에서 ```sudo visudo``` 명령어로 /etc/sudoers.tmp접근  
+  
+4. /etc/sudoers.tmp 맨 아래에 아래 코드를 붙혀넣기
+```
+%sudo ALL=NOPASSWD: /usr/sbin/service
+```
+
+5. 재부팅 후 ```ssh localhost```로 접속이 잘되는지 
+
 # 재부팅시 자동으로 local port forward 
+
+# WSL + Docker Configuration
+To be continue...
