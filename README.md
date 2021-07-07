@@ -107,4 +107,7 @@ SSH의 기본 포트는 22이므로 필자는 22를 추가해줬다.
 ```Set-ExecutionPolicy RemoteSigned```이라는 명령어를  
 관리자 권한으로 power shell에 실행시켜보자
   
-5. 외부에서 SSH 접속이 성공하면 다음 스텝으로 넘어간다.
+5. 외부에서 SSH 접속이 성공하면 다음 스텝으로 넘어간다.  
+  
+# 재부팅시 자동으로 SSH 서버 실행
+# 재부팅시 자동으로 local port forward 
