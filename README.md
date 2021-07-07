@@ -147,8 +147,15 @@ windows의 "작업 스케줄러"를 사용하여 이 문제를 해결한다.
 "가장 높은 수준의 권한으로 실행" 체크  
 "구성 대상"은 "Windows 10"으로 설정  
   
-4. 
-
+4. "트리거" 탭에서 "새로 만들기"  
+"작업시작" : "로그온할 때" 선택
+  
+5. "동작" 탭에서 "새로 만들기"  
+"프로그램/스크립트" : ```C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe```  
+"인수 추가(옵션)" : ```-ExecutionPolicy Unrestricted -File "C:\local_portforward.ps1"```  
+```-File 뒤에는 경로+파일명을 적자```
+  
+6. 재부팅 후 외부접속이 잘 되는지 확인한다.
 
 # WSL + Docker Configuration
 To be continue...
