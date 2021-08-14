@@ -158,4 +158,5 @@ windows의 "작업 스케줄러"를 사용하여 이 문제를 해결한다.
 6. 재부팅 후 외부접속이 잘 되는지 확인한다.
 
 # WSL + Docker Configuration
-To be continue...
+window용 docker를 설치할 때 wsl를 체크해주면 자동으로 설치 된다.  
+참 세상 좋아졌다.
