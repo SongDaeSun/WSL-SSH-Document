@@ -110,8 +110,21 @@ SSH의 기본 포트는 22이므로 필자는 22를 추가해줬다.
 ```
 PowerShell.exe -ExecutionPolicy Bypass -File .\local_portforward.ps1
 ```
-  
-5. 외부에서 SSH 접속이 성공하면 다음 스텝으로 넘어간다.  
+
+5. 
+만일 다음과 같은 문구만이 나오고 제대로 실행이 되지 않는다면,
+```
+/bin/bash: line 1: ipconfig: command not found
+The Script Exited, the ip address of WSL 2 cannot be found
+```
+
+ubuntu에 ifconfig관련 패키지가 설치되지 않은 것이므로,
+```
+sudo apt-get install net-tools
+```
+으로 새로 설치해주자.
+
+6. 외부에서 SSH 접속이 성공하면 다음 스텝으로 넘어간다.  
   
 # 재부팅시 자동으로 SSH 서버 실행
 컴퓨터를 재부팅하면 SSH 서버가 꺼져서 다시 안켜진다.  
