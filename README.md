@@ -146,6 +146,11 @@ sudo apt-get install net-tools
 %sudo ALL=NOPASSWD: /usr/sbin/service
 ```
 
+만일 sshd.bat 파일이 실행자체가 안된다면, 
+윈도우 11기준 "제어판"-"프로그램"-"프로그램 및 기능"-좌측 상단의 "Windows 기능 켜기/끄기"-"Linux용 Windows 하위 시스템"체크 후  
+프로그램 지시 따라 재부팅을 해보자.
+
+
 5. 재부팅 후 ```ssh localhost```로 접속이 잘되는지 
 
 # 재부팅시 자동으로 local port forward 
