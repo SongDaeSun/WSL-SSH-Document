@@ -182,3 +182,9 @@ windows의 "작업 스케줄러"를 사용하여 이 문제를 해결한다.
 # WSL + Docker Configuration
 window용 docker를 설치할 때 wsl를 체크해주면 자동으로 설치 된다.  
 참 세상 좋아졌다.
+
+
+# bare ubuntu ssh start on boot
+```
+sudo systemctl enable ssh
+```
